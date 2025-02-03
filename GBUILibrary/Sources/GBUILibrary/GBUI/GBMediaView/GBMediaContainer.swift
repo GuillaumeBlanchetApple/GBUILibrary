@@ -21,7 +21,7 @@ public struct GBMediaContainer: View {
         GBMediaView(mediaID: mediaID, mediaType: .youtube)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .cornerRadius(16)
-            .shadow(radius: 5)
+            .shadow(color: Color.primary.opacity(0.4), radius: 5)
             .frame(height: height)
             .padding(.horizontal)
     }

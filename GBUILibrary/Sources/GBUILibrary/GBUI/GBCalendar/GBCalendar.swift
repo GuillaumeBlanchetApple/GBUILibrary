@@ -65,9 +65,9 @@ public struct GBCalendar: View {
                 // Fallback on earlier versions
                 Text("Ce service n'est pas disponible pour votre version d'iOS")
             }
-        }.background(Color.white)
+        }.background(Color(.systemBackground))
         .cornerRadius(16)
-        .shadow(radius: 5)
+        .shadow(color: Color.primary.opacity(0.4), radius: 5)
         .padding(.horizontal)
     }
 

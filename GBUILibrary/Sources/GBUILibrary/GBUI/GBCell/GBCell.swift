@@ -78,11 +78,11 @@ public struct GBCell: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(title)
                         .font(.headline)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                     if let subtitle = subtitle {
                         Text(subtitle)
                             .font(.subheadline)
-                            .foregroundColor(.black.opacity(0.7))
+                            .foregroundColor(.secondary)
                     }
                 }
                 .padding(
@@ -94,9 +94,9 @@ public struct GBCell: View {
                     )
                 )
             }
-            .background(Color.white)
+            .background(Color(.systemBackground))
             .cornerRadius(16)
-            .shadow(radius: 5)
+            .shadow(color: Color.primary.opacity(0.4), radius: 5)
         }
         .disabled(!isTappable)
         .padding(.horizontal)
