@@ -21,6 +21,7 @@ public struct GBAnyView: View {
         case button(String, Color?, () -> Void)
         case calendar
         case cell(Image?, String, String?, DifficultyBy)
+        case fileSelector(GBFileSelector.FileType)
         case map
         case media(String, CGFloat)
         case qrCode(String, String?)
@@ -42,6 +43,8 @@ public struct GBAnyView: View {
                 } else {
                     GBCell(title: title, subtitle: subtitle, difficultyBy: difficultyBy)
                 }
+            case .fileSelector(let fileType):
+                GBFileSelector(fileType: fileType)
             case .map:
                 GBMap()
             case .media(let id, let height):
