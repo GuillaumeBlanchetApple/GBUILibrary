@@ -18,7 +18,7 @@ public struct GBMap: View {
                     alignment: .leading
                 )
                 .cornerRadius(16)
-                .shadow(radius: 5)
+                .shadow(color: Color.primary.opacity(0.4), radius: 5)
                 .padding(.horizontal)
         } else {
             // Fallback on earlier versions
